@@ -22,8 +22,6 @@ and what you should write is the sayHi function that makes the code above work,
     
 */
 
-
-
   //Code Here for first
 var first = function(arr, callback){
   callback(arr[0]);
@@ -35,10 +33,7 @@ first(names, function(firstName){
 });
 
 
-
 /* NEXT PROBLEM ---- NEXT PROBLEM ---- NEXT PROBLEM ---- NEXT PROBLEM */
-
-
 
 
   //Code Here for last
@@ -52,12 +47,7 @@ last(names, function(lastName){
 
 
 
-
-
 /* NEXT PROBLEM ---- NEXT PROBLEM ---- NEXT PROBLEM ---- NEXT PROBLEM */
-
-
-
 
 
 
@@ -72,11 +62,7 @@ multiply(4, 3, function(answer){
 
 
 
-
-
 /* NEXT PROBLEM ---- NEXT PROBLEM ---- NEXT PROBLEM ---- NEXT PROBLEM */
-
-
 
 
 
@@ -103,11 +89,7 @@ contains(names, 'Colt', function(result){
 
 
 
-
-
 /* NEXT PROBLEM ---- NEXT PROBLEM ---- NEXT PROBLEM ---- NEXT PROBLEM */
-
-
 
 
     //Code Here for uniq
@@ -129,12 +111,7 @@ uniq(names, function(uniqArr){
 });
 
 
-
-
-
 /* NEXT PROBLEM ---- NEXT PROBLEM ---- NEXT PROBLEM ---- NEXT PROBLEM */
-
-
 
 
     //Code Here for each
@@ -152,12 +129,7 @@ each(names, function(item, indice){
 // The question wants each item and indice to be logged so every item and its position prints.
 
 
-
-
 /* NEXT PROBLEM ---- NEXT PROBLEM ---- NEXT PROBLEM ---- NEXT PROBLEM */
-
-
-
 
 
  //code here for getUserById
