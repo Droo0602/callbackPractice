@@ -8,7 +8,7 @@ Below is a sample problem
    });
    
 
-and what you should write is the favNum function that makes the code above work, 
+and what you should write is the sayHi function that makes the code above work, 
     
     
    var sayHi = function(str, cb){
@@ -25,7 +25,10 @@ and what you should write is the favNum function that makes the code above work,
 
 
   //Code Here for first
-  
+var first = function(arr, callback){
+  callback(arr[0]);
+}
+
 var names = ['Tyler', 'Cahlan', 'Ryan', 'Colt', 'Tyler', 'Blaine', 'Cahlan'];
 first(names, function(firstName){
   console.log('The first name in names is ', firstName)
@@ -39,7 +42,9 @@ first(names, function(firstName){
 
 
   //Code Here for last
-
+var last = function (arr,callback){
+  callback(arr[arr.length-1])
+}
 var names = ['Tyler', 'Cahlan', 'Ryan', 'Colt', 'Tyler', 'Blaine', 'Cahlan'];
 last(names, function(lastName){
   console.log('The last name in names is ', lastName);
@@ -57,6 +62,9 @@ last(names, function(lastName){
 
 
   //Code Here for multiply
+var multiply = function(x,y,callback){
+  callback(x*y);
+}
 
 multiply(4, 3, function(answer){
   console.log('The answer is ', answer); //should console.log 12
@@ -73,6 +81,16 @@ multiply(4, 3, function(answer){
 
 
   //Code Here for contains
+var contains = function(arr,str,callback){
+  for (var i=0;i<arr.length;i++){
+    if (str === arr[i]){
+      callback(true);
+      return;
+    }
+  }
+  callback(false);
+  return;
+}
 
 var names = ['Tyler', 'Cahlan', 'Ryan', 'Colt', 'Tyler', 'Blaine', 'Cahlan'];
 contains(names, 'Colt', function(result){
@@ -93,6 +111,17 @@ contains(names, 'Colt', function(result){
 
 
     //Code Here for uniq
+var uniq = function(arr, callback){
+  for (var i = 0; i < arr.length; i++){
+    for (var j = i+1; j < arr.length; j++){
+      if (arr[i] === arr[j]){
+        arr.splice(j,1)
+      }
+    }
+  }
+  callback(arr);
+  return;
+}
 
 var names = ['Tyler', 'Cahlan', 'Ryan', 'Colt', 'Tyler', 'Blaine', 'Cahlan'];
 uniq(names, function(uniqArr){
@@ -109,12 +138,18 @@ uniq(names, function(uniqArr){
 
 
     //Code Here for each
+function each(arr,callback){
+  for (var i = 0; i < arr.length; i++){
+    callback(arr[i],i)
+  }
+}
+
 
 var names = ['Tyler', 'Cahlan', 'Ryan', 'Colt', 'Tyler', 'Blaine', 'Cahlan'];
 each(names, function(item, indice){
   console.log('The item in the ' + indice + ' position is ' + item)
 });
-
+// The question wants each item and indice to be logged so every item and its position prints.
 
 
 
@@ -126,6 +161,14 @@ each(names, function(item, indice){
 
 
  //code here for getUserById
+function getUserById(arr,str,callback){
+  for (var i = 0; i < arr.length;i++){
+    for (key in arr[i])
+      if (arr[i][key] === str){
+        return callback(arr[i])
+      }
+    }
+  }
 
 var users = [
   {
